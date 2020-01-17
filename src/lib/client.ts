@@ -1,6 +1,6 @@
 import {GenericRestClient, ApiCallOptions} from 'simplerestclients';
-import {buildRequest, buildResponse} from './lib/utils';
-import {origin} from './lib/config';
+import {buildRequest, buildResponse} from './utils';
+import {origin} from './config';
 
 export class Client extends GenericRestClient {
   constructor (private _token: string) {

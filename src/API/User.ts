@@ -1,6 +1,6 @@
-import type * as MF from '../types/User';
+import * as MF from '../types/User';
+import {Client} from '../lib/client';
 import {origin} from '../lib/config';
-import {Client} from '../Client';
 
 export class User extends Client {
   constructor () {
