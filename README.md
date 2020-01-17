@@ -1,6 +1,6 @@
 # MediaFire JavaScript SDK
 
-A small JS wrapper around the MediaFire RESTful API
+A JS wrapper around the MediaFire RESTful API
 
 ## Installation
 

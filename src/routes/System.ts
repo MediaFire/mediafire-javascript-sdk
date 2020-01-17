@@ -7,7 +7,7 @@ export class System extends Client {
     super(`${origin}/api/system/`);
   }
 
-  async getInfo() {
-    return await this.post<MF.UserInfo>('get_info.php');
+  async getLimits() {
+    return await this.post<MF.UserInfo>('get_limits.php');
   }
 }

@@ -18,14 +18,11 @@
     "theme": "minimal",
     "mode": "file",
     "out": "docs",
-    "toc": [
-      "Device",
-      "Download",
-      "File",
-      "Folder",
-      "System",
-      "User"
-    ]
+    "includes": "src",
+    "hideGenerator": true,
+    "excludeProtected": true,
+    "excludePrivate": true,
+    "excludeNotExported": true
   },
   "include": [
     "src/**/*"
