@@ -5,7 +5,7 @@
   "license": "Apache-2.0",
   "description": "MediaFire's JavaScript SDK",
   "homepage": "https://mediafire.com",
-  "types": "./pkg/index.d.ts",
+  "types": "./dist/index.d.ts",
   "main": "index.js",
   "scripts": {
     "build": "tsc",

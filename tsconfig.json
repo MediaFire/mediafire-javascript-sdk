@@ -10,14 +10,14 @@
     "noResolve": false,
     "module": "commonjs",
     "target": "es5",
-    "outDir": "pkg",
+    "outDir": "dist",
     "lib": ["dom", "es5", "es2015"]
   },
   "include": [
     "src/**/*"
   ],
   "exclude": [
-    "pkg",
+    "dist",
     "node_modules"
   ]
 }
