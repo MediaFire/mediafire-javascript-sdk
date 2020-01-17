@@ -1,20 +1,43 @@
 {
   "name": "mediafire",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "author": "MediaFire",
-  "homepage": "https://mediafire.com/",
-  "description": "MediaFire's Javascript SDK",
-  "keywords": ["mediafire", "uploading", "file", "sharing"],
   "license": "Apache-2.0",
+  "description": "MediaFire's JavaScript SDK",
+  "homepage": "https://mediafire.com",
+  "types": "./dist/index.d.ts",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "publish": "npm run lint && tsc",
+    "lint": "eslint --config .eslintrc --ext .ts src",
+    "typedoc": "typedoc --name \"MediaFire JavaScript SDK\" --readme none --hideGenerator --excludeNotExported --excludeProtected --out docs src"
+  },
+  "dependencies": {
+    "simplerestclients": "^0.2.12"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^2.16.0",
+    "@typescript-eslint/parser": "^2.16.0",
+    "eslint": "^6.8.0",
+    "eslint-config-skype": "^1.5.0",
+    "eslint-plugin-import": "^2.20.0",
+    "eslint-plugin-react": "^7.18.0",
+    "typedoc": "^0.16.7",
+    "typescript": "^3.8.0-beta"
   },
   "repository": {
-    "type": "git",
-    "url": "git+https://github.com/MediaFire/mediafire-javascript-sdk.git"
+    "url": "https://github.com/MediaFire/mediafire-javascript-sdk.git"
   },
   "bugs": {
     "url": "https://github.com/MediaFire/mediafire-javascript-sdk/issues"
-  }
+  },
+  "keywords": [
+    "mediafire",
+    "storage",
+    "backup",
+    "upload",
+    "file",
+    "sharing"
+  ]
 }

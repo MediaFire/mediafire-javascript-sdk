@@ -1,0 +1,14 @@
+{
+  "extends": ["skype"],
+  "rules": {
+    "no-console": ["error", { "allow": ["error", "warn"] }],
+    "@typescript-eslint/no-floating-promises": "off",
+    "dot-notation": "off",
+    "arrow-body-style": "off"
+  },
+  "parserOptions": {
+    "project": [
+      "./tsconfig.json"
+    ]
+  }
+}
