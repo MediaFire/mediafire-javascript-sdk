@@ -5,13 +5,13 @@
   "license": "Apache-2.0",
   "description": "MediaFire's JavaScript SDK",
   "homepage": "https://mediafire.com",
-  "types": "./dist/index.d.ts",
+  "types": "./pkg/index.d.ts",
   "main": "index.js",
   "scripts": {
     "build": "tsc",
     "publish": "npm run lint && tsc",
     "lint": "eslint --config .eslintrc --ext .ts src",
-    "typedoc": "typedoc --name \"MediaFire JavaScript SDK\" --readme none --hideGenerator --excludeNotExported --excludeProtected --out docs src"
+    "typedoc": "typedoc --name \"MediaFire JavaScript SDK\" --readme none --hideGenerator --excludeNotExported --excludeProtected --out doc src"
   },
   "dependencies": {
     "simplerestclients": "^0.2.12"
