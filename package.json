@@ -1,0 +1,20 @@
+{
+  "name": "mediafire",
+  "version": "0.0.0",
+  "author": "MediaFire",
+  "homepage": "https://mediafire.com/",
+  "description": "MediaFire's Javascript SDK",
+  "keywords": ["mediafire", "uploading", "file", "sharing"],
+  "license": "Apache-2.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MediaFire/mediafire-javascript-sdk.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MediaFire/mediafire-javascript-sdk/issues"
+  }
+}
