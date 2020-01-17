@@ -1,8 +1,3 @@
-export type API =
-  | UserInfo
-  | UserAvatar
-  | UserRenewSession;
-
 export interface UserInfo {
   ekey: string;
   email: string;

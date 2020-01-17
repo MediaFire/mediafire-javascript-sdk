@@ -1,6 +1,6 @@
-import {Client} from '../Client';
+import type * as MF from '../types/User';
 import {origin} from '../config';
-import * as API from '../types';
+import {Client} from '../Client';
 
 export class User extends Client {
   constructor () {
@@ -8,14 +8,14 @@ export class User extends Client {
   }
 
   async getInfo() {
-    return await this.post<API.UserInfo>('get_info.php');
+    return await this.post<MF.UserInfo>('get_info.php');
   }
 
   async getAvatar() {
-    return await this.post<API.UserAvatar>('get_avatar.php');
+    return await this.post<MF.UserAvatar>('get_avatar.php');
   }
 
   async renewSession() {
-    return await this.post<API.UserRenewSession>('renew_session_token.php');
+    return await this.post<MF.UserRenewSession>('renew_session_token.php');
   }
 }

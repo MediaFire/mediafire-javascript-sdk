@@ -1,6 +1,6 @@
-import {Client} from '../Client';
+import type * as MF from '../types/User';
 import {origin} from '../config';
-import * as API from '../types';
+import {Client} from '../Client';
 
 export class Download extends Client {
   constructor () {
@@ -8,6 +8,6 @@ export class Download extends Client {
   }
 
   async getInfo() {
-    return await this.post<API.UserInfo>('get_info.php');
+    return await this.post<MF.UserInfo>('get_info.php');
   }
 }
