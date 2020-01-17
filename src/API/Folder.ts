@@ -1,5 +1,5 @@
 import type * as MF from '../types/User';
-import {origin} from '../config';
+import {origin} from '../lib/config';
 import {Client} from '../Client';
 
 export class Folder extends Client {
