@@ -1,6 +1,6 @@
 {
   "name": "mediafire",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "MediaFire",
   "license": "Apache-2.0",
   "description": "MediaFire's JavaScript SDK",
@@ -11,7 +11,7 @@
     "build": "tsc",
     "publish": "npm run lint && tsc",
     "lint": "eslint --config .eslintrc --ext .ts src",
-    "typedoc": "typedoc --name \"MediaFire JavaScript SDK\" --readme none --hideGenerator --excludeNotExported --excludeProtected --out doc src"
+    "typedoc": "typedoc --hideGenerator --excludeProtected --excludePrivate src"
   },
   "dependencies": {
     "simplerestclients": "^0.2.12"

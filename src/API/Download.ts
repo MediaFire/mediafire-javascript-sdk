@@ -2,9 +2,9 @@ import {Client} from '../Client';
 import {origin} from '../config';
 import * as API from '../types';
 
-export class File extends Client {
+export class Download extends Client {
   constructor () {
-    super(`${origin}/api/file/`);
+    super(`${origin}/api/download/`);
   }
 
   async getInfo() {

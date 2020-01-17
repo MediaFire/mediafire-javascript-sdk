@@ -13,6 +13,20 @@
     "outDir": "dist",
     "lib": ["dom", "es5", "es2015"]
   },
+  "typedocOptions": {
+    "name": "MediaFire JavaScript SDK",
+    "theme": "minimal",
+    "mode": "file",
+    "out": "docs",
+    "toc": [
+      "Device",
+      "Download",
+      "File",
+      "Folder",
+      "System",
+      "User"
+    ]
+  },
   "include": [
     "src/**/*"
   ],

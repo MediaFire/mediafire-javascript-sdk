@@ -1,1 +1,1 @@
-export const MEDIAFIRE = 'https://www.mediafire.com';
+export const origin = 'https://www.mediafire.com';
