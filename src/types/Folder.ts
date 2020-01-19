@@ -1,39 +1,39 @@
 export interface FolderInfo {
-  xxx: string;
+  todo: any;
 }
 
 export interface FolderDepth {
-  xxx: string;
+  todo: any;
 }
 
 export interface FolderContent {
-  xxx: string;
+  todo: any;
 }
 
 export interface FolderUpdated {
-  xxx: string;
+  todo: any;
 }
 
 export interface FolderMoved {
-  xxx: string;
+  todo: any;
 }
 
 export interface FolderCopied {
-  xxx: string;
+  todo: any;
 }
 
 export interface FolderDeleted {
-  xxx: string;
+  todo: any;
 }
 
 export interface FolderPurged {
-  xxx: string;
+  todo: any;
 }
 
 export interface FolderConfiguredFiledrop {
-  xxx: string;
+  todo: any;
 }
 
 export interface FolderSearch {
-  xxx: string;
+  todo: any;
 }

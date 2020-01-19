@@ -1,35 +1,31 @@
 export interface FileInfo {
-  xxx: string;
-}
-
-export interface FileLinks {
-  xxx: string;
+  todo: any;
 }
 
 export interface FileUpdated {
-  xxx: string;
+  todo: any;
 }
 
 export interface FileMoved {
-  xxx: string;
+  todo: any;
 }
 
 export interface FileCopied {
-  xxx: string;
+  todo: any;
 }
 
 export interface FileDeleted {
-  xxx: string;
+  todo: any;
 }
 
 export interface FilePurged {
-  xxx: string;
+  todo: any;
 }
 
 export interface FileRecentlyModified {
-  xxx: string;
+  todo: any;
 }
 
 export interface FileZip {
-  xxx: string;
+  todo: any;
 }

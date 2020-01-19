@@ -1,15 +1,18 @@
 export interface DeviceChanges {
-  xxx: string;
+  /**
+   * The email address of the user
+   */
+  todo: any;
 }
 
 export interface DeviceForeignResources {
-  xxx: string;
+  todo: any;
 }
 
 export interface DeviceStatus {
-  xxx: string;
+  todo: any;
 }
 
 export interface DeviceTrash {
-  xxx: string;
+  todo: any;
 }

@@ -16,15 +16,6 @@ export class File extends Client {
   }
 
   /**
-   * Returns the view link, normal download link, and, if possible,
-   * the direct download link of a file. If the direct download link
-   * is not returned, an error message is returned explaining the reason.
-   */
-  async getLinks() {
-    return await this.post<MF.FileLinks>('get_info.php');
-  }
-
-  /**
    * Updates a file's information.
    */
   async update() {
