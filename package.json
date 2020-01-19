@@ -1,0 +1,43 @@
+{
+  "name": "mediafire",
+  "version": "0.0.2",
+  "author": "MediaFire",
+  "license": "Apache-2.0",
+  "description": "A JS wrapper around the MediaFire RESTful API",
+  "homepage": "https://mediafire.com",
+  "types": "./dist/index.d.ts",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "publish": "npm run lint && tsc",
+    "lint": "eslint --config .eslintrc --ext .ts src",
+    "typedoc": "typedoc"
+  },
+  "dependencies": {
+    "simplerestclients": "^0.2.12"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^2.16.0",
+    "@typescript-eslint/parser": "^2.16.0",
+    "eslint": "^6.8.0",
+    "eslint-config-skype": "^1.5.0",
+    "eslint-plugin-import": "^2.20.0",
+    "eslint-plugin-react": "^7.18.0",
+    "typedoc": "^0.16.7",
+    "typescript": "^3.8.0-beta"
+  },
+  "repository": {
+    "url": "https://github.com/MediaFire/mediafire-javascript-sdk.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MediaFire/mediafire-javascript-sdk/issues"
+  },
+  "keywords": [
+    "mediafire",
+    "storage",
+    "backup",
+    "upload",
+    "file",
+    "sharing"
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "compilerOptions": {
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitReturns": true,
+    "strictNullChecks": true,
+    "noImplicitAny": false,
+    "noImplicitThis": true,
+    "noUnusedLocals": true,
+    "declaration": true,
+    "noResolve": false,
+    "module": "commonjs",
+    "target": "es5",
+    "outDir": "dist",
+    "lib": ["dom", "es5", "es2015"]
+  },
+  "typedocOptions": {
+    "name": "MediaFire JavaScript SDK",
+    "theme": "minimal",
+    "mode": "file",
+    "out": "docs",
+    "includes": "src",
+    "hideGenerator": true,
+    "excludeProtected": true,
+    "excludePrivate": true,
+    "excludeNotExported": true
+  },
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "dist",
+    "node_modules"
+  ]
+}

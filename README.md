@@ -1,6 +1,21 @@
-### ![MediaFire](http://cdn.mediafire.com/images/backgrounds/header/logoDarkFull.png) JavaScript SDK ###
+# MediaFire JavaScript SDK
 
+A JS wrapper around the MediaFire RESTful API
 
-Documentation available here: [MediaFire Developers](http://www.mediafire.com/developers/sdks_and_tools/javascript)
+## Installation
 
+```shell
+npm i mediafire
+```
 
+## Usage
+
+```typescript
+import MF from 'mediafire';
+
+const token = '...'; // your session token
+const user = new MF.User(token);
+const info = await user.getInfo();
+
+console.log(info);
+```
