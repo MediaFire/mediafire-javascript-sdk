@@ -11,11 +11,18 @@ npm i mediafire
 ## Usage
 
 ```typescript
-import MF from 'mediafire';
+// Import the lib
+import MediaFire from 'mediafire';
 
-const token = '...'; // your session token
-const user = new MF.User(token);
-const info = await user.getInfo();
+// Create a new session
+const mf = new MediaFire();
 
-console.log(info);
+// Authenticate future requests
+await mf.authenticate('<token>');
+
+// Retrieve user info from the API
+const info = await mf.user.getInfo();
+
+// Log the JSON results to the console
+console.log('your user info:', info);
 ```
