@@ -1,21 +1,6 @@
-# MediaFire JavaScript SDK
+### ![MediaFire](http://cdn.mediafire.com/images/backgrounds/header/logoDarkFull.png) JavaScript SDK ###
 
-A JS wrapper around the MediaFire RESTful API
 
-## Installation
+Documentation available here: [MediaFire Developers](http://www.mediafire.com/developers/sdks_and_tools/javascript)
 
-```shell
-npm i mediafire
-```
 
-## Usage
-
-```typescript
-import MF from 'mediafire';
-
-const token = '...'; // your session token
-const user = new MF.User(token);
-const info = await user.getInfo();
-
-console.log(info);
-```
