@@ -1,5 +1,7 @@
 /node_modules
+/docs
 /src/.vs
 /src/bin
 /src/obj
+/.vscode
 *.user

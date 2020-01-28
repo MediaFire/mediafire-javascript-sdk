@@ -1,6 +1,6 @@
 {
   "name": "mediafire",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "author": "MediaFire",
   "license": "Apache-2.0",
   "description": "A JS wrapper around the MediaFire RESTful API",
