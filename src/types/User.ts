@@ -35,8 +35,8 @@ export interface UserInfo {
    */
   premium: boolean;
   /**
-   * An alternate form of the session user's ID used for authentication.
-   * Only returned if this API was called with SSL.
+   * An alternate form of the session user's ID used for authentication
+   * Only returned if this API was called with SSL
    */
   ekey?: string;
 }

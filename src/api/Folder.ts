@@ -8,25 +8,61 @@ export class Folder extends Client {
 
   /**
    * Returns a list of a folder's details.
+   * 
+   * @param folderKey - The key of the folder you wish to load
    */
-  async getInfo() {
-    return await this.post<MF.FolderInfo>('get_info.php');
+  async getInfo(folderKey: string) {
+    return await this.post<MF.FolderInfo>('get_info.php', {folderKey});
   }
 
   /**
    * Specifies how deep in the folder structure, how far from root, the target folder is.
    * The number of levels deep is returned with a list of "chain folders" which
    * illustrate the direct path from root to the target folder.
+   * 
+   * @param folderKey - The key of the folder you wish to load the depth of
    */
-  async getDepth() {
-    return await this.post<MF.FolderDepth>('get_depth.php');
+  async getDepth(folderKey: string) {
+    return await this.post<MF.FolderDepth>('get_depth.php', {folderKey});
   }
 
   /**
    * Returns a collection of top-level folders or files for target folder.
+   * 
+   * @param folderKey - The key of the folder you wish to load the contents for
+   * @param contentType - Specifies the type of content to return
+   * @param chunk - Specifies which segment of the results to return starting from one
+   * @param chunkSize - The number of items to include in each chunk returned (0-1000)
+   * @param orderDirection - If one, sort descending; otherwise, ascending
+   * @param orderBy - Key of the column by which to sort
+   * @param filter - Filter by privacy and/or by filetype
    */
-  async getContent() {
-    return await this.post<MF.FolderContent>('get_content.php');
+  async getContent(
+    folderKey: string,
+    contentType: 'folders' | 'files',
+    chunk = 0,
+    chunkSize = 100,
+    orderDirection?: 1 | 0,
+    orderBy?:
+      | 'name'
+      | 'size'
+      | 'sync'
+      | 'date_created'
+      | 'date_shared',
+    filter?:
+      | 'application'
+      | 'archive'
+      | 'audio'
+      | 'development'
+      | 'document'
+      | 'image'
+      | 'presentation'
+      | 'spreadsheet'
+      | 'video',
+  ) {
+    return await this.post<MF.FolderContent>('get_content.php', {
+      folderKey, contentType, chunk, chunkSize, orderDirection, orderBy, filter,
+    });
   }
 
   /**

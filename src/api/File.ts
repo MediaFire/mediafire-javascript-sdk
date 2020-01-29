@@ -23,14 +23,14 @@ export class File extends Client {
   }
 
   /**
-   * Moves one or more files from one location to another.
+   * Moves one or more files from one location to another
    */
   async move() {
     return await this.post<MF.FileMoved>('move.php');
   }
 
   /**
-   * Copies one or more files from one location to another.
+   * Copies one or more files from one location to another
    */
   async copy() {
     return await this.post<MF.FileCopied>('copy.php');
@@ -38,29 +38,29 @@ export class File extends Client {
 
   /**
    * Deletes one or more session user files by setting the
-   * files' delete_date property and moving the files to the trash can.
-   * The file is still accessible in the trash can.
+   * files' deleteDate property and moving the files to the trash can.
+   * The file is still accessible in the trash can
    */
   async delete() {
     return await this.post<MF.FileDeleted>('delete.php');
   }
 
   /**
-   * Permanently deletes one or more files.
+   * Permanently deletes one or more files
    */
   async purge() {
     return await this.post<MF.FilePurged>('purge.php');
   }
 
   /**
-   * Returns a list of quickkeys of the recently modified files.
+   * Returns a list of quickkeys of the recently modified files
    */
   async recentlyModified() {
     return await this.post<MF.FileRecentlyModified>('recently_modified.php');
   }
 
   /**
-   * Download multiple files at once by packaging the files into a ZIP container.
+   * Download multiple files at once by packaging the files into a ZIP container
    */
   async zip() {
     return await this.post<MF.FileZip>('zip.php');

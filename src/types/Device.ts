@@ -1,7 +1,4 @@
 export interface DeviceChanges {
-  /**
-   * The email address of the user
-   */
   todo: any;
 }
 
