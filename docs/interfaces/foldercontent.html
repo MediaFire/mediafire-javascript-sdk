@@ -2369,7 +2369,16 @@ img {
 			<a href="foldercontent.html" class="tsd-kind-icon">Folder<wbr>Content</a>
 			<ul>
 				<li class=" tsd-kind-property tsd-parent-kind-interface">
-					<a href="foldercontent.html#todo" class="tsd-kind-icon">todo</a>
+					<a href="foldercontent.html#chunknumber" class="tsd-kind-icon">chunk<wbr>Number</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-interface">
+					<a href="foldercontent.html#chunksize" class="tsd-kind-icon">chunk<wbr>Size</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-interface">
+					<a href="foldercontent.html#contenttype" class="tsd-kind-icon">content<wbr>Type</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-interface">
+					<a href="foldercontent.html#morechunks" class="tsd-kind-icon">more<wbr>Chunks</a>
 				</li>
 			</ul>
 		</li>
@@ -2377,6 +2386,15 @@ img {
 </nav>
 <div class="container container-main">
 	<div class="content-wrap">
+		<section class="tsd-panel tsd-comment">
+			<div class="tsd-comment tsd-typography">
+				<div class="lead">
+					<a href="#a-hrefclassesfolderhtmlgetcontentfoldergetcontenta-api-response" id="a-hrefclassesfolderhtmlgetcontentfoldergetcontenta-api-response" style="color: inherit; text-decoration: none;">
+						<h4><a href="../classes/folder.html#getcontent">Folder.getContent</a> API Response</h4>
+					</a>
+				</div>
+			</div>
+		</section>
 		<section class="tsd-panel tsd-hierarchy">
 			<h3>Hierarchy</h3>
 			<ul class="tsd-hierarchy">
@@ -2392,7 +2410,10 @@ img {
 					<section class="tsd-index-section ">
 						<h3>Properties</h3>
 						<ul class="tsd-index-list">
-							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="foldercontent.html#todo" class="tsd-kind-icon">todo</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="foldercontent.html#chunknumber" class="tsd-kind-icon">chunk<wbr>Number</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="foldercontent.html#chunksize" class="tsd-kind-icon">chunk<wbr>Size</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="foldercontent.html#contenttype" class="tsd-kind-icon">content<wbr>Type</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="foldercontent.html#morechunks" class="tsd-kind-icon">more<wbr>Chunks</a></li>
 						</ul>
 					</section>
 				</div>
@@ -2401,14 +2422,64 @@ img {
 		<section class="tsd-panel-group tsd-member-group ">
 			<h2>Properties</h2>
 			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-				<a name="todo" class="tsd-anchor"></a>
-				<h3>todo</h3>
-				<div class="tsd-signature tsd-kind-icon">todo<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span></div>
+				<a name="chunknumber" class="tsd-anchor"></a>
+				<h3>chunk<wbr>Number</h3>
+				<div class="tsd-signature tsd-kind-icon">chunk<wbr>Number<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/MediaFire/mediafire-javascript-sdk/blob/0f8822d/src/types/Folder.ts#L10">src/types/Folder.ts:10</a></li>
+						<li>Defined in <a href="https://github.com/MediaFire/mediafire-javascript-sdk/blob/ed40763/src/types/Folder.ts#L85">src/types/Folder.ts:85</a></li>
 					</ul>
 				</aside>
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>The chunk number</p>
+					</div>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+				<a name="chunksize" class="tsd-anchor"></a>
+				<h3>chunk<wbr>Size</h3>
+				<div class="tsd-signature tsd-kind-icon">chunk<wbr>Size<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">0</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/MediaFire/mediafire-javascript-sdk/blob/ed40763/src/types/Folder.ts#L77">src/types/Folder.ts:77</a></li>
+					</ul>
+				</aside>
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>The number of items returned in a single chunk</p>
+					</div>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+				<a name="contenttype" class="tsd-anchor"></a>
+				<h3>content<wbr>Type</h3>
+				<div class="tsd-signature tsd-kind-icon">content<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"files"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"folders"</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/MediaFire/mediafire-javascript-sdk/blob/ed40763/src/types/Folder.ts#L81">src/types/Folder.ts:81</a></li>
+					</ul>
+				</aside>
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>The type of content requested</p>
+					</div>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+				<a name="morechunks" class="tsd-anchor"></a>
+				<h3>more<wbr>Chunks</h3>
+				<div class="tsd-signature tsd-kind-icon">more<wbr>Chunks<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/MediaFire/mediafire-javascript-sdk/blob/ed40763/src/types/Folder.ts#L89">src/types/Folder.ts:89</a></li>
+					</ul>
+				</aside>
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>Indicates whether more chunks are available</p>
+					</div>
+				</div>
 			</section>
 		</section>
 		<footer>

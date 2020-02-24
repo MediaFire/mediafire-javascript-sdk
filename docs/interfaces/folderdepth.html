@@ -2369,7 +2369,10 @@ img {
 			<a href="folderdepth.html" class="tsd-kind-icon">Folder<wbr>Depth</a>
 			<ul>
 				<li class=" tsd-kind-property tsd-parent-kind-interface">
-					<a href="folderdepth.html#todo" class="tsd-kind-icon">todo</a>
+					<a href="folderdepth.html#chainfolders" class="tsd-kind-icon">chain<wbr>Folders</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-interface">
+					<a href="folderdepth.html#depth" class="tsd-kind-icon">depth</a>
 				</li>
 			</ul>
 		</li>
@@ -2377,6 +2380,15 @@ img {
 </nav>
 <div class="container container-main">
 	<div class="content-wrap">
+		<section class="tsd-panel tsd-comment">
+			<div class="tsd-comment tsd-typography">
+				<div class="lead">
+					<a href="#a-hrefclassesfolderhtmlgetdepthfoldergetdeptha-api-response" id="a-hrefclassesfolderhtmlgetdepthfoldergetdeptha-api-response" style="color: inherit; text-decoration: none;">
+						<h4><a href="../classes/folder.html#getdepth">Folder.getDepth</a> API Response</h4>
+					</a>
+				</div>
+			</div>
+		</section>
 		<section class="tsd-panel tsd-hierarchy">
 			<h3>Hierarchy</h3>
 			<ul class="tsd-hierarchy">
@@ -2392,7 +2404,8 @@ img {
 					<section class="tsd-index-section ">
 						<h3>Properties</h3>
 						<ul class="tsd-index-list">
-							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="folderdepth.html#todo" class="tsd-kind-icon">todo</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="folderdepth.html#chainfolders" class="tsd-kind-icon">chain<wbr>Folders</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="folderdepth.html#depth" class="tsd-kind-icon">depth</a></li>
 						</ul>
 					</section>
 				</div>
@@ -2401,14 +2414,34 @@ img {
 		<section class="tsd-panel-group tsd-member-group ">
 			<h2>Properties</h2>
 			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-				<a name="todo" class="tsd-anchor"></a>
-				<h3>todo</h3>
-				<div class="tsd-signature tsd-kind-icon">todo<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span></div>
+				<a name="chainfolders" class="tsd-anchor"></a>
+				<h3>chain<wbr>Folders</h3>
+				<div class="tsd-signature tsd-kind-icon">chain<wbr>Folders<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">[</span><span class="tsd-signature-symbol">{ </span>folderkey<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">]</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/MediaFire/mediafire-javascript-sdk/blob/0f8822d/src/types/Folder.ts#L6">src/types/Folder.ts:6</a></li>
+						<li>Defined in <a href="https://github.com/MediaFire/mediafire-javascript-sdk/blob/ed40763/src/types/Folder.ts#L62">src/types/Folder.ts:62</a></li>
 					</ul>
 				</aside>
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>A collection of folders, starting with the specified folder, linking back to root</p>
+					</div>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+				<a name="depth" class="tsd-anchor"></a>
+				<h3>depth</h3>
+				<div class="tsd-signature tsd-kind-icon">depth<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/MediaFire/mediafire-javascript-sdk/blob/ed40763/src/types/Folder.ts#L58">src/types/Folder.ts:58</a></li>
+					</ul>
+				</aside>
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>The numerical distance of the specified folder from the root folder</p>
+					</div>
+				</div>
 			</section>
 		</section>
 		<footer>

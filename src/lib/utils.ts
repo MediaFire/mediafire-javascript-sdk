@@ -9,13 +9,11 @@ export const buildRequest = (input: object): object => {
   return input;
 };
 
-// TODO: remove any types
-export const buildResponse = <T>(input: unknown): T => {
+export const buildResponse = <T>(input: any): T => {
   if (_isObject(input)) {
-    const response = input as any['response'];
-    if (response) {
-      const index = Object.keys(response).filter(i => _mfprops.indexOf(i) === -1);
-      return buildResponse(response[index as any]);
+    if (input.response) {
+      const index = Object.keys(input.response).filter(i => _mfprops.indexOf(i) === -1);
+      return buildResponse(input.response[index as any]);
     }
     const n = {};
     Object.keys(input as any).forEach((k) => (n[_camelCase(k)] = buildResponse((input as any)[k])));
