@@ -11,5 +11,15 @@ export interface DeviceStatus {
 }
 
 export interface DeviceTrash {
-  todo: any;
+  name: string;
+  revision: number;
+  folderkey: number;
+  chunkSize: number;
+  chunkNumber: number;
+  contentType: string;
+  moreChunks: boolean;
+  folderCount: number;
+  fileCount: number;
+  folders: any[];
+  files: any[];
 }

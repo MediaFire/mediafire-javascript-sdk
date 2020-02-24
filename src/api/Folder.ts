@@ -113,8 +113,40 @@ export class Folder extends Client {
 
   /**
    * Searches the the content of a given folder.
+   * 
+   * @param folderKey - The key of the folder you wish to load the depth of.
+   * @param searchText - The search keywords to look for in filenames, folder names, and descriptions.
+   * @param searchAll - If folder_key is passed, then this parameter is ignored. If folder_key is not passed, search_all can be used to indicate whether to search the root folder only or the entire device (default 'yes').
+   * @param details - If "yes", the API returns the total_files, total_folders, and total_size for all the contained folders and files recursively of each folder. However, there is a limit on how many items can be counted. If the limit is reached, an extra property overflow will be returned as well. If "shallow" is specified, the API returns the byte_count of files immediately inside each folder (non-recursive).
+   * @param filter - Filter by privacy and/or by filetype. This is a comma-separated list of file types and privacy options. Can take one or more of the following values : "public", "private", "image", "video", "audio", "document", "spreadsheet", "presentation", "application", "archive", "data", and "development".
    */
-  async search() {
-    return await this.post<MF.FolderSearch>('search.php');
+  async search(
+    folderKey: string,
+    searchText: string,
+    searchAll = true,
+    details?:
+      | 'no'
+      | 'yes'
+      | 'shallow',
+    filter?:
+      | 'public'
+      | 'private'
+      | 'application'
+      | 'archive'
+      | 'audio'
+      | 'development'
+      | 'document'
+      | 'image'
+      | 'presentation'
+      | 'spreadsheet'
+      | 'video',
+    ) {
+    return await this.post<MF.FolderSearch>('search.php', {
+      folderKey,
+      searchText,
+      searchAll,
+      details,
+      filter,
+    });
   }
 }

@@ -15,7 +15,7 @@ export default class MediaFire {
 
   private _renewal: number;
 
-  public async authenticate(token: string, prompt?: Function) {
+  public authenticate(token: string, prompt?: Function) {
     this.user = new User(token);
     this.file = new File(token);
     this.folder = new Folder(token);
@@ -23,7 +23,7 @@ export default class MediaFire {
     this._renewal = setInterval(async() => {
       try {
         const {sessionToken} = await this.user.renewSession();
-        await this.authenticate(sessionToken, prompt);
+        this.authenticate(sessionToken, prompt);
       } catch (e) {
         prompt && prompt(e);
         clearTimeout(this._renewal);

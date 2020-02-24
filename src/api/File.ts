@@ -10,9 +10,14 @@ export class File extends Client {
    * Returns a list of the file's details.
    * This call will return the quickkey, filename,
    * creation date, description, status, size, etc.
+   * 
+   * @param quickKey - The quickkey that identifies the file.
+   * You can also specify multiple quickkeys separated by commas.
+   * The maximum number of quickkeys allowed is 500.
+   * Responses for one-time keys will not include quickkey.
    */
-  async getInfo() {
-    return await this.post<MF.FileInfo>('get_info.php');
+  async getInfo(quickKey: string) {
+    return await this.post<MF.FileInfo>('get_info.php', {quickKey});
   }
 
   /**
@@ -54,9 +59,13 @@ export class File extends Client {
 
   /**
    * Returns a list of quickkeys of the recently modified files
+   * 
+   * @param numberOfFiles - Indicates the number of quickkeys to be returned. 10 (default)
    */
-  async recentlyModified() {
-    return await this.post<MF.FileRecentlyModified>('recently_modified.php');
+  async recentlyModified(numberOfFiles: number) {
+    return await this.post<MF.FileRecentlyModified>('recently_modified.php', {
+      numberOfFiles,
+    });
   }
 
   /**

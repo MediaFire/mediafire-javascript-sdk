@@ -11,12 +11,9 @@ export const buildRequest = (input: object): object => {
 
 export const buildResponse = <T>(input: any): T => {
   if (_isObject(input)) {
-    if (input.response) {
-      const index = Object.keys(input.response).filter(i => _mfprops.indexOf(i) === -1);
-      return buildResponse(input.response[index as any]);
-    }
+    if (input.response) return buildResponse(input.response);
     const n = {};
-    Object.keys(input as any).forEach((k) => (n[_camelCase(k)] = buildResponse((input as any)[k])));
+    Object.keys(input).forEach((k) => (n[_camelCase(k)] = buildResponse((input)[k])));
     return n as any;
   } else if (Array.isArray(input)) {
     return (input as any).map((i: any) => buildResponse(i));
@@ -34,7 +31,6 @@ export const buildResponse = <T>(input: any): T => {
 
 const _negatives = ['no', 'false', 'off'];
 const _affirmatives = ['yes', 'true', 'on'];
-const _mfprops = ['action', 'asynchronous', 'result', 'error', 'message', 'new_key', 'current_api_version'];
 const _isArray = (i: unknown) => Array.isArray(i);
 const _isObject = (i: unknown) => i === Object(i) && !_isArray(i) && typeof i !== 'function';
 const _camelCase = (i: string) => i.replace(/([-_][a-z])/ig, l => l.toUpperCase().replace('-', '').replace('_', ''));
