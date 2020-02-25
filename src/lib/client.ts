@@ -7,7 +7,7 @@ export class Client extends GenericRestClient {
     public host?: string,
     public token?: string,
   ) {
-    super(`${host || 'https://www.mediafire.com'}/api/${api}/`);
+    super(`${host || 'https://www.mediafire.com'}/api/1.5/${api}/`);
   }
 
   protected _defaultOptions: ApiCallOptions = {
