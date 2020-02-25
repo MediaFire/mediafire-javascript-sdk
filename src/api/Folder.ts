@@ -2,8 +2,8 @@ import * as MF from '../types/Folder';
 import {Client} from '../lib/client';
 
 export class Folder extends Client {
-  constructor (public token?: string) {
-    super('folder', token);
+  constructor (public host?: string, public token?: string) {
+    super('folder', host, token);
   }
 
   /**

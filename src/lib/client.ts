@@ -2,10 +2,12 @@ import {GenericRestClient, ApiCallOptions} from 'simplerestclients';
 import {buildRequest, buildResponse} from './utils';
 
 export class Client extends GenericRestClient {
-  protected static ORIGIN = 'https://www.mediafire.com';
-
-  constructor (public api: string, public token?: string) {
-    super(`${Client.ORIGIN}/api/${api}/`);
+  constructor (
+    public api: string,
+    public host?: string,
+    public token?: string,
+  ) {
+    super(`${host || 'https://www.mediafire.com'}/api/${api}/`);
   }
 
   protected _defaultOptions: ApiCallOptions = {

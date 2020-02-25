@@ -2,8 +2,8 @@ import * as MF from '../types/User';
 import {Client} from '../lib/client';
 
 export class User extends Client {
-  constructor (public token?: string) {
-    super('user', token);
+  constructor (public host?: string, public token?: string) {
+    super('user', host, token);
   }
 
   /**

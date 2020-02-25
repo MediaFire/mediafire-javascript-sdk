@@ -6,20 +6,21 @@ import {System} from './api/System';
 
 export default class MediaFire {
   constructor (
-    public user = new User(),
-    public file = new File(),
-    public folder = new Folder(),
-    public device = new Device(),
-    public system = new System(),
+    public host?: string,
+    public user = new User(host),
+    public file = new File(host),
+    public folder = new Folder(host),
+    public device = new Device(host),
+    public system = new System(host),
   ) {}
 
   private _renewal: number;
 
   public authenticate(token: string, prompt?: Function) {
-    this.user = new User(token);
-    this.file = new File(token);
-    this.folder = new Folder(token);
-    this.device = new Device(token);
+    this.user = new User(this.host, token);
+    this.file = new File(this.host, token);
+    this.folder = new Folder(this.host, token);
+    this.device = new Device(this.host, token);
     this._renewal = setInterval(async() => {
       try {
         const {sessionToken} = await this.user.renewSession();
