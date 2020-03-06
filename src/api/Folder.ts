@@ -33,7 +33,7 @@ export class Folder extends Client {
    * @param contentType - Specifies the type of content to return
    * @param chunk - Specifies which segment of the results to return starting from one
    * @param chunkSize - The number of items to include in each chunk returned (0-1000)
-   * @param orderDirection - If one, sort descending; otherwise, ascending
+   * @param orderDirection - Whether to sort ascending or descending
    * @param orderBy - Key of the column by which to sort
    * @param filter - Filter by privacy and/or by filetype
    */
@@ -42,7 +42,7 @@ export class Folder extends Client {
     contentType: 'folders' | 'files',
     chunk = 0,
     chunkSize = 100,
-    orderDirection?: 1 | 0,
+    orderDirection?: 'asc' | 'desc',
     orderBy?:
       | 'name'
       | 'size'
