@@ -75,8 +75,10 @@ export class Folder extends Client {
   /**
    * Move one or more user's folders to target destination.
    */
-  async move() {
-    return await this.post<MF.FolderMoved>('move.php');
+  async move(folderKeySrc: string, folderKeyDst: string) {
+    return await this.post<MF.FolderMoved>('move.php', {
+      folderKeySrc, folderKeyDst,
+    });
   }
 
   /**

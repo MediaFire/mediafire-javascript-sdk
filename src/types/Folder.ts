@@ -106,7 +106,14 @@ export interface FolderUpdated {
 }
 
 export interface FolderMoved {
-  todo: any;
+  /**
+   * A collection of files entered that had their names changed to avoid collisions in the destination
+   */
+  newNames: object;
+  /**
+   * The new revision number of the device
+   */
+  newDeviceRevision: number;
 }
 
 export interface FolderCopied {

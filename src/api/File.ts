@@ -30,8 +30,10 @@ export class File extends Client {
   /**
    * Moves one or more files from one location to another
    */
-  async move() {
-    return await this.post<MF.FileMoved>('move.php');
+  async move(quickKey: string, folderKey: string) {
+    return await this.post<MF.FileMoved>('move.php', {
+      quickKey, folderKey,
+    });
   }
 
   /**

@@ -17,7 +17,8 @@ export class Client extends GenericRestClient {
 
   async post<T>(path: string, props?: object, opts?: ApiCallOptions) {
     const body = {sessionToken: this.token, responseFormat: 'json', ...props};
-    const data = await this._performApiCall<T>(path, 'POST', buildRequest(body), opts);
-    return buildResponse<T>(data.body);
+    const data = this._performApiCall<T>(path, 'POST', buildRequest(body), opts);
+    const resp = await data.promise;
+    return buildResponse<T>(resp.body);
   }
 }

@@ -1,5 +1,5 @@
 {
-  "version": "0.0.14",
+  "version": "0.0.17",
   "name": "mediafire",
   "author": "MediaFire",
   "license": "Apache-2.0",
@@ -14,17 +14,17 @@
     "typedoc": "typedoc"
   },
   "dependencies": {
-    "simplerestclients": "^0.2.12"
+    "simplerestclients": "^1.0.0"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^2.16.0",
-    "@typescript-eslint/parser": "^2.16.0",
+    "@typescript-eslint/eslint-plugin": "^2.22.0",
+    "@typescript-eslint/parser": "^2.22.0",
     "eslint": "^6.8.0",
-    "eslint-config-skype": "^1.5.0",
-    "eslint-plugin-import": "^2.20.0",
-    "eslint-plugin-react": "^7.18.0",
-    "typedoc": "^0.16.7",
-    "typescript": "^3.8.0-beta"
+    "eslint-config-ult": "^0.1.3",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-react": "^7.18.3",
+    "typedoc": "^0.16.11",
+    "typescript": "^3.8.3"
   },
   "repository": {
     "url": "https://github.com/MediaFire/mediafire-javascript-sdk.git"
