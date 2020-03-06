@@ -46,9 +46,8 @@ export class Folder extends Client {
     orderBy?:
       | 'name'
       | 'size'
-      | 'sync'
-      | 'date_created'
-      | 'date_shared',
+      | 'created'
+      | 'downloads',
     filter?:
       | 'application'
       | 'archive'
