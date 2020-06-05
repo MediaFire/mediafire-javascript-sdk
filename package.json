@@ -1,5 +1,5 @@
 {
-  "version": "0.0.19",
+  "version": "0.1.0",
   "name": "mediafire",
   "author": "MediaFire",
   "license": "Apache-2.0",
@@ -9,22 +9,14 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc",
-    "publish": "npm run lint && tsc",
-    "lint": "eslint --config .eslintrc --ext .ts src",
     "typedoc": "typedoc"
   },
   "dependencies": {
     "simplerestclients": "^1.0.0"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^2.22.0",
-    "@typescript-eslint/parser": "^2.22.0",
-    "eslint": "^6.8.0",
-    "eslint-config-ult": "^0.1.3",
-    "eslint-plugin-import": "^2.20.1",
-    "eslint-plugin-react": "^7.18.3",
-    "typedoc": "^0.16.11",
-    "typescript": "^3.8.3"
+    "typedoc": "^0.17.7",
+    "typescript": "^3.9.5"
   },
   "repository": {
     "url": "https://github.com/MediaFire/mediafire-javascript-sdk.git"

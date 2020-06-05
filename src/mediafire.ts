@@ -14,21 +14,10 @@ export default class MediaFire {
     public system = new System(host),
   ) {}
 
-  private _renewal: number;
-
-  public authenticate(token: string, prompt?: Function) {
+  public authenticate(token: string) {
     this.user = new User(this.host, token);
     this.file = new File(this.host, token);
     this.folder = new Folder(this.host, token);
     this.device = new Device(this.host, token);
-    this._renewal = setInterval(async() => {
-      try {
-        const {sessionToken} = await this.user.renewSession();
-        this.authenticate(sessionToken, prompt);
-      } catch (e) {
-        prompt && prompt(e);
-        clearTimeout(this._renewal);
-      }
-    }, 4 * 60 * 1000);
   }
 }
