@@ -36,6 +36,18 @@ export interface FolderInfo {
      */
     folderCount: number;
     /**
+     * The total recursive amount of files in the folder
+     */
+    totalFiles?: number;
+    /**
+     * The total recursive amount of folders in the folder
+     */
+    totalFolders?: number;
+    /**
+     * The total recursive size of the folder
+     */
+    totalSize?: number;
+    /**
      * The date and time the folder was created
      */
     createdUtc: string;
