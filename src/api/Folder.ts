@@ -11,8 +11,8 @@ export class Folder extends Client {
    * 
    * @param folderKey - The key of the folder you wish to load
    */
-  async getInfo(folderKey: string) {
-    return await this.post<MF.FolderInfo>('get_info.php', {folderKey});
+  async getInfo(folderKey: string, details?: 'no' | 'yes' | 'shallow') {
+    return await this.post<MF.FolderInfo>('get_info.php', {folderKey, details});
   }
 
   /**
@@ -42,6 +42,7 @@ export class Folder extends Client {
     contentType: 'folders' | 'files',
     chunk = 0,
     chunkSize = 100,
+    details?: 'no' | 'yes' | 'shallow',
     orderDirection?: 'asc' | 'desc',
     orderBy?:
       | 'name'
@@ -60,7 +61,7 @@ export class Folder extends Client {
       | 'video',
   ) {
     return await this.post<MF.FolderContent>('get_content.php', {
-      folderKey, contentType, chunk, chunkSize, orderDirection, orderBy, filter,
+      folderKey, contentType, chunk, chunkSize, details, orderDirection, orderBy, filter,
     });
   }
 
